@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dogData2"
+            type="com.example.dog2.ApiData" />
+
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/imageofsecAct"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:outlineAmbientShadowColor="@color/black"/>
+
+
+    <TextView
+        android:id="@+id/idforsecact"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text='@{"Dog Id\t\t\t\t\t\t\t\t\t\t\t\t\t:\t\t"+dogData2.id}'
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/nameforsecact"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageofsecAct" />
+
+    <TextView
+                    android:id="@+id/nameforsecact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text='@{"Dog Name\t\t\t\t\t\t\t\t:\t\t"+dogData2.name}'
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/idforsecact"
+                    app:layout_constraintBottom_toTopOf="@id/lifespanforsecact"/>
+
+                <TextView
+                    android:id="@+id/lifespanforsecact"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:text='@{"LifeSpan\t\t\t\t\t\t\t\t\t\t:\t\t"+dogData2.life_span}'
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/nameforsecact"
+                    app:layout_constraintBottom_toTopOf="@id/originforsecact"/>
+
+                <TextView
+                    android:id="@+id/originforsecact"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:text='@{"Dog Origin\t\t\t\t\t\t\t:\t\t"+dogData2.origin}'
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lifespanforsecact"
+                    app:layout_constraintBottom_toTopOf="@id/breedgroupforsecact"
+                    />
+
+                <TextView
+                    android:id="@+id/breedgroupforsecact"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text='@{"Breed Group\t\t\t\t\t:\t\t"+dogData2.breed_group}'
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/originforsecact"
+                    app:layout_constraintBottom_toTopOf="@id/tempforsecact"/>
+
+                <TextView
+                    android:id="@+id/tempforsecact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:textStyle="bold"
+                    android:text='@{"Temperament\t\t\t:\t\t"+dogData2.temperament}'
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/breedgroupforsecact"
+                    app:layout_constraintBottom_toTopOf="@id/heightforsecact"/>
+
+                <TextView
+                    android:id="@+id/heightforsecact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:textStyle="bold"
+                    android:text='@{"Dog Height\t\t\t\t\t\t\t:\t\t("+dogData2.height.metric+")cm"}'
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tempforsecact"
+                    app:layout_constraintBottom_toTopOf="@id/weightforsecact"/>
+
+                <TextView
+                    android:id="@+id/weightforsecact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:textStyle="bold"
+                    android:text='@{"Dog Weight\t\t\t\t\t\t:\t\t("+dogData2.weight.metric+")Kg"}'
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/heightforsecact"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </layout>
+
+
+
